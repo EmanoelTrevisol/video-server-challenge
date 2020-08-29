@@ -1,0 +1,407 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-08-29T00:17:39.402Z",
+  "__export_source": "insomnia.desktop.app:v2020.2.1",
+  "resources": [
+    {
+      "_id": "req_b4d31b0703df4286bb0b83ab2cf695f9",
+      "authentication": {},
+      "body": { "mimeType": "application/json", "text": "" },
+      "created": 1598654371925,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_0b6d3c374e594da595413ac0d3fbe5ce",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_0e45b43e6eb248b19a0686878b10e680",
+          "name": "X-Auth",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNDk4ZmM0ZWI2ZmY2NmU3YzUyNWM4MSIsImlhdCI6MTU5ODY1NjQ1MiwiZXhwIjoxNTk4NzQyODUyfQ.SixvIt_Wez5nNVH0CwQpM6yBr7y-yHtIExzf-296EnU"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1598654371925,
+      "method": "POST",
+      "modified": 1598660053246,
+      "name": "Join/Leave",
+      "parameters": [],
+      "parentId": "fld_e7e23e3181a645aa9b6a6b4eb878d868",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{baseUrl}}{{ apiPath  }}{{ roomsPath }}/:roomId/join",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e7e23e3181a645aa9b6a6b4eb878d868",
+      "created": 1598654158719,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1598654158719,
+      "modified": 1598654158719,
+      "name": "Rooms",
+      "parentId": "wrk_7bee27fdec29476594ece1469f92281b",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_7bee27fdec29476594ece1469f92281b",
+      "created": 1598231816540,
+      "description": "",
+      "modified": 1598660209359,
+      "name": "video-server-challenge",
+      "parentId": null,
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_53e8bf7f9d1e475f99f40b41d18ffc85",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"newHost\": \"5f4984040f5e976acd1ea299\"\n}"
+      },
+      "created": 1598654339847,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_f5059387d318474a856993c881f7c653",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_39bd9548fac84a1196408960c3805eae",
+          "name": "X-Auth",
+          "value": ""
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1598654339847,
+      "method": "POST",
+      "modified": 1598660072561,
+      "name": "Change Host",
+      "parameters": [],
+      "parentId": "fld_e7e23e3181a645aa9b6a6b4eb878d868",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{baseUrl}}{{ apiPath  }}{{ roomsPath }}/:roomId/changeHost",
+      "_type": "request"
+    },
+    {
+      "_id": "req_03d87706e31f43ebbf7e3b7f6d9a4fc8",
+      "authentication": {},
+      "body": {},
+      "created": 1598654213814,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1598654178084,
+      "method": "GET",
+      "modified": 1598660130625,
+      "name": "Get Room",
+      "parameters": [],
+      "parentId": "fld_e7e23e3181a645aa9b6a6b4eb878d868",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{baseUrl}}{{ apiPath  }}{{ roomsPath }}/:roomId",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6229f1f39b634404b5d1d30ea26f99b8",
+      "authentication": {},
+      "body": {},
+      "created": 1598654194901,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1598654178034,
+      "method": "GET",
+      "modified": 1598659343844,
+      "name": "User Rooms",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_4bfbcffddfe545dabe79948a9e4885e3",
+          "name": "username",
+          "value": ""
+        }
+      ],
+      "parentId": "fld_e7e23e3181a645aa9b6a6b4eb878d868",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{baseUrl}}{{ apiPath  }}{{ roomsPath }}/userRooms",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d0b7e32ac8f54ba493a1aacabebf3aa0",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"First Room\"\n}"
+      },
+      "created": 1598654177984,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_7b06367696a54a9595e427d1ade1ac23",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_ff16d82e5a454d2f883c6af0013b8b36",
+          "name": "X-Auth",
+          "value": ""
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1598654177984,
+      "method": "POST",
+      "modified": 1598660146072,
+      "name": "Create",
+      "parameters": [],
+      "parentId": "fld_e7e23e3181a645aa9b6a6b4eb878d868",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{baseUrl}}{{ apiPath  }}{{ roomsPath }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9877988fa4054669b79ec4c7176bdb4e",
+      "authentication": {},
+      "body": {},
+      "created": 1598231943996,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_06f7e201ebbf45a9858792beee8bd7b7",
+          "name": "X-Auth",
+          "value": ""
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1598231943996,
+      "method": "DELETE",
+      "modified": 1598659364191,
+      "name": "Delete",
+      "parameters": [],
+      "parentId": "fld_a7122a2ea952479d8c016d151f18c2bf",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/users/",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_a7122a2ea952479d8c016d151f18c2bf",
+      "created": 1598231826521,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1598231826521,
+      "modified": 1598231826521,
+      "name": "User Management",
+      "parentId": "wrk_7bee27fdec29476594ece1469f92281b",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_4ab0d1f21a8842b2be5aa5c4bf47d492",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"password\": \"123456\",\n\t\"mobile_token\": \"khgcccccccccccccccccccccc\"\n}"
+      },
+      "created": 1598231938393,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_1949bd4f2c254244a14a47c76d978208",
+          "name": "X-Auth",
+          "value": ""
+        },
+        {
+          "id": "pair_4ee13884b43942beafdf03fb49ae5ef2",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1598231938393,
+      "method": "PUT",
+      "modified": 1598659372556,
+      "name": "Update",
+      "parameters": [],
+      "parentId": "fld_a7122a2ea952479d8c016d151f18c2bf",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/users/",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9e93f5900f5546899189ab1fd3fad31f",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"\",\n\t\"password\": \"\"\n}"
+      },
+      "created": 1598231931314,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_67548ad657b546f6a6bf46d35bf3b98a",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1598231931314,
+      "method": "POST",
+      "modified": 1598659381437,
+      "name": "Sign in",
+      "parameters": [],
+      "parentId": "fld_a7122a2ea952479d8c016d151f18c2bf",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/users/signin",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0e1638a139a640e2a0e707d7e04e5ce7",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"\",\n\t\"password\": \"\"\n}"
+      },
+      "created": 1598231923694,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_cd659202a289460a8870208823c62b63",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1598231915459,
+      "method": "POST",
+      "modified": 1598659391518,
+      "name": "Register",
+      "parameters": [],
+      "parentId": "fld_a7122a2ea952479d8c016d151f18c2bf",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/users/register",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8a1ee5b83fe544b9a63badcfe0016d41",
+      "authentication": {},
+      "body": {},
+      "created": 1598231915409,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1598231915409,
+      "method": "GET",
+      "modified": 1598659526422,
+      "name": "Get Users",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_9a2f91a5f47d49c38e00d3c27ae9602b",
+          "name": "username",
+          "value": ""
+        }
+      ],
+      "parentId": "fld_a7122a2ea952479d8c016d151f18c2bf",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/users/list",
+      "_type": "request"
+    },
+    {
+      "_id": "env_d7f1ea65b5748ca1c4333602e8d5c3334c3e30f9",
+      "color": null,
+      "created": 1598231816618,
+      "data": {
+        "apiPath": "/api",
+        "baseUrl": "http://localhost:8000",
+        "roomsPath": "/rooms",
+        "usersPath": "/users"
+      },
+      "dataPropertyOrder": {
+        "&": ["baseUrl", "apiPath", "usersPath", "roomsPath"]
+      },
+      "isPrivate": false,
+      "metaSortKey": 1598231816618,
+      "modified": 1598655419363,
+      "name": "Base Environment",
+      "parentId": "wrk_7bee27fdec29476594ece1469f92281b",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_d7f1ea65b5748ca1c4333602e8d5c3334c3e30f9",
+      "cookies": [],
+      "created": 1598231816621,
+      "modified": 1598231816621,
+      "name": "Default Jar",
+      "parentId": "wrk_7bee27fdec29476594ece1469f92281b",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_8feab33db28040bfad35f37dbe34ee2b",
+      "contentType": "yaml",
+      "contents": "",
+      "created": 1598231816548,
+      "fileName": "tauria-test",
+      "modified": 1598231816548,
+      "parentId": "wrk_7bee27fdec29476594ece1469f92281b",
+      "_type": "api_spec"
+    }
+  ]
+}
